@@ -39,36 +39,48 @@ Basic examples
 - Live webcam (show annotated frames):
 
 ```bash
+uv run src/main.py --source 0 --show
+# or
 python3 src/main.py --source 0 --show
 ```
 
 - Live webcam and save annotated video:
 
 ```bash
+uv run src/main.py --source 0 --show --save --out output/webcam_pred.mp4
+# or
 python3 src/main.py --source 0 --show --save --out output/webcam_pred.mp4
 ```
 
 - Run on a video file (show):
 
 ```bash
+uv run src/main.py --source content/video/video_1.mov --show
+# or
 python3 src/main.py --source content/video/video_1.mov --show
 ```
 
 - Run on a video file and save annotated output:
 
 ```bash
+uv run src/main.py --source content/video/video_1.mov --save --out output/pred_video_1.mp4
+# or
 python3 src/main.py --source content/video/video_1.mov --save --out output/pred_video_1.mp4
 ```
 
 - Run on a single image (show):
 
 ```bash
+uv run src/main.py --source content/images/photo.jpg --show
+# or
 python3 src/main.py --source content/images/photo.jpg --show
 ```
 
 - Single image (save result):
 
 ```bash
+uv run src/main.py --source content/images/photo.jpg --save --out output/photo_pred.jpg
+# or
 python3 src/main.py --source content/images/photo.jpg --save --out output/photo_pred.jpg
 ```
 
@@ -85,12 +97,16 @@ python3 src/main.py --source 0 --show --device cpu        # force CPU
 - Use FP16 on CUDA (if supported):
 
 ```bash
+uv run src/main.py --source 0 --show --device cuda --half
+# or
 python3 src/main.py --source 0 --show --device cuda --half
 ```
 
 - Reduce compute by processing fewer frames (streaming stride):
 
 ```bash
+uv run src/main.py --source content/video/video_1.mov --save --stride 2 --out output/stride2.mp4
+# or
 python3 src/main.py --source content/video/video_1.mov --save --stride 2 --out output/stride2.mp4
 ```
 
@@ -100,9 +116,13 @@ If annotated colors look off, try forcing how plotted images are interpreted:
 
 ```bash
 # Treat model plot output as RGB (swap to BGR for OpenCV)
+uv run src/main.py --source 0 --show --color-mode rgb
+# or
 python3 src/main.py --source 0 --show --color-mode rgb
 
 # Treat plot output as already BGR
+uv run src/main.py --source 0 --show --color-mode bgr
+# or
 python3 src/main.py --source 0 --show --color-mode bgr
 ```
 
