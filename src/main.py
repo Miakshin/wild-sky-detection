@@ -40,7 +40,7 @@ def select_device() -> str:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run YOLO model on video stream (webcam or file)")
-    parser.add_argument("--weights", "-w", type=str, default=str(BASE / "../models/v1/my_model.pt"),
+    parser.add_argument("--weights", "-w", type=str, default=str(BASE / "../models/v2/v2_model.pt"),
                         help="Path to model weights (.pt)")
     parser.add_argument("--source", "-s", type=str, default="0",
                         help="Video source: integer for webcam (0), or file path")

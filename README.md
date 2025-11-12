@@ -127,7 +127,7 @@ python3 src/main.py --source 0 --show --color-mode bgr
 ```
 
 Where things are located
-- Default weights (used by the script if you don't pass `--weights`): `models/v1/my_model.pt`
+- Default weights (used by the script if you don't pass `--weights`): `models/v2/v2_model.pt`
 - Example videos: `content/video/`
 - Default output path (when not specified): `output/pred.mp4`
 
