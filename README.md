@@ -2,10 +2,10 @@
 
 This repository contains code and resources for detecting drones using machine learning techniques.
 The project aims to identify drones in various environments using image and video data.
-This is a beginning of a project that has an aim to be run on edge devices for real-time drone detection.
+This is the beginning of a project that aims to be run on edge devices for real-time drone detection.
 
-The model for object detection is based on YOLOv5s and trained on a custom dataset containing images of drones, birds, and fixed objects.
-Model was trained using Ultralytics YOLOv8 framework in Google Colab. Data for dataset was collected from roboflow and other open sources.
+The model for object detection is based on YOLOv8s and trained on a custom dataset containing images of drones, birds, and fixed objects.
+The model was trained using Ultralytics YOLOv8 framework in Google Colab. Data for the dataset was collected from Roboflow and other open sources.
 Training example you can find in [colab.ipynb](colab.ipynb).
 
 ## Features
